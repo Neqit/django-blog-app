@@ -13,8 +13,8 @@ class Profile(models.Model):
 
 
     #Overrides save method to resize uploaded images
-    def save(self):
-        super().save()
+    def save(self, *args, **kawrgs):
+        super().save(*args, **kawrgs)
 
         img = Image.open(self.image.path)
 
